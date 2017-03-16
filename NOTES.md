@@ -23,6 +23,11 @@ Watch
 gulp serve
 http://localhost:3000/
 
+Test
+====
+Open index.html and save as test.html
+Delete body content
+
 AWS S3 Deployment
 =================
 TODO
