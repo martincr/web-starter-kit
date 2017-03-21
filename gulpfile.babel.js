@@ -254,3 +254,25 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 // Load custom tasks from the `tasks` directory
 // Run: `npm install --save-dev require-dir` from the command-line
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
+
+var awspublish = require('gulp-awspublish');
+
+gulp.task('deploy', ['default'], () => {
+  // create a new publisher
+  const publisher = $.awspublish.create({
+    params: {
+      'Bucket': 'dev1.martincrockett.com'
+    }
+  });
+
+  // define custom headers
+  const headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+  };
+
+  return gulp.src('dist/**/*.*')
+    .pipe(publisher.publish(headers))
+    .pipe(publisher.sync())
+    .pipe(publisher.cache())
+    .pipe($.awspublish.reporter());
+});
