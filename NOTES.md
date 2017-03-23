@@ -50,6 +50,9 @@ TODO
 Remove <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 Change <link rel="stylesheet" href="styles/main.css"> to <link rel="stylesheet" href="styles/foundation.scss">
 
+npm install foundation-sites --save
+TODO
+
 Firebase Deployment
 ===================
 https://github.com/google/web-starter-kit/blob/master/docs/deploy.md
@@ -77,3 +80,7 @@ npm install --save-dev gulp-awspublish
 Create a deploy task > add task to gulpfile.js
 Add cache file to .gitignore
 gulp deploy
+
+Asset Revisioning
+=================
+https://github.com/yeoman/generator-webapp/blob/master/docs/recipes/asset-revisioning.md

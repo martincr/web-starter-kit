@@ -255,6 +255,8 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 // Run: `npm install --save-dev require-dir` from the command-line
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
 
+
+/* MC */
 var awspublish = require('gulp-awspublish');
 
 gulp.task('deploy', ['default'], () => {
