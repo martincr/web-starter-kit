@@ -37,5 +37,8 @@
   },
   "eslintConfig": {
     "extends": "google"
+  },
+  "dependencies": {
+    "purecss": "^0.6.2"
   }
 }
